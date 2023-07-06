@@ -1,28 +1,27 @@
-pipeline'
-{
-  agent any
+pipeline {
+    agent any
 
-  stages{
-    
-    stages('Developing'){
-    steps{
-      echo 'Developing stage'
+    stages {
+        stage('Developing') {
+            steps {
+                echo 'Developing stage'
+            }
+        }
+       
+        stage('Deploying'){
+            steps{
+                echo 'Deploying stage'
+            }
+        }
+         stage('Testing'){
+            steps{
+                echo 'Testing stage'
+            }
+        }
+        stage('releasing'){
+            steps{
+            echo 'releasing stage'
+            }
+        }
     }
-    }
-      stages('Deploymenting'){
-    steps{
-      echo 'Deploymenting stage'
-    }
-    }
-      stages('Testing'){
-    steps{
-      echo 'Testing stage'
-    }
-    }
-      stages('Releasing'){
-    steps{
-      echo 'Releasing stage'
-    }
-    }
-  }
 }
